@@ -24,6 +24,8 @@ header{
     z-index: 99;
     width: 100%;
     box-shadow:0 2px 2px #3a3a3a;
+    display:flex;
+    justify-content:baseline
 }
 h1{
     font-family:'Oswald', sans-serif;
@@ -45,6 +47,7 @@ menu li{
     border-bottom: 1px solid #3a3a3a;
 }
 /* Nav bar styles with dropdown menu*/
+
 nav{
     position:absolute;
     background-color: #ffffff;
@@ -52,11 +55,22 @@ nav{
     width: 100%;
     padding: 0 1rem;
     left:0;
-    display:none
+    display:none;
+    top:100%;
 }
 header a{
     text-decoration: none;
     color:inherit;
+}
+/*nav toggle*/
+#nav-toggle:checked~nav{
+    display:block;
+}
+#nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    font-size: 2rem;
 }
 /* main content */
 main{
