@@ -46,7 +46,7 @@ menu li{
 .active{
     border-bottom: 1px solid #3a3a3a;
 }
-/* Nav bar styles with dropdown menu*/
+/* Navbar styles with dropdown menu*/
 
 nav{
     position:absolute;
@@ -75,10 +75,26 @@ header a{
 /* main content */
 main{
     background-color: lightblue;
-    /*make main element take any surplus space to pish footer down*/
-    flex:1 0 auto
+    /*make main element take any surplus space to push footer down*/
+    flex:1 0 auto;
+    margin-top: 40px;
 }
 /* footer  */
 footer{
     background-color: orange;
 }
+/*Media Query: for tablets and larger screens (768px and up)*/
+ @media screen and (min-width: 768px) {
+
+    /*to make sure the navbar is always displayed*/
+    nav {
+        display: block;
+        position:relative;    
+        box-shadow:non;
+        width:fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display:flex;
+    }
+ }
