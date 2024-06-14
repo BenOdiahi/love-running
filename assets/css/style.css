@@ -4,14 +4,14 @@
 
 /*Astericks wildcard selector to override default syles added by the browser */
 
-*{padding:0%;
+*{padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 /*General style*/
 body{
     min-height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: column;
     /*Generic project styles*/ 
     color:#3a3a3a; 
@@ -20,49 +20,54 @@ body{
 /* header */
 header{
     background-color: #ffffff;
-    padding: 0rem;
-    position:fixed;
-    z-index:99;
+    padding: 0 1rem;
+    position: fixed;
+   z-index: 99; 
     width: 100%;
     box-shadow:0 2px 2px #3a3a3a;
-    display:flex;
-    justify-content:baseline
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
+header a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 h1{
     font-family:'Oswald', sans-serif;
-    text-transform:uppercase;
-    letter-spacing:2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: #252525;
 
 }
-#menu{
-    font-size: 100%;
+#menu {
+    font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-menu li{
+menu > li{
     margin-bottom: 1em;
-
 }
+
 .active{
     border-bottom: 1px solid #3a3a3a;
 }
-/* Navbar styles with dropdown menu*/
 
-nav{
-    position:absolute;
+/* Navbar styles with dropdown toggle*/
+
+nav {
+    position: absolute;
     background-color: #ffffff;
-    box-shadow: 0 2px 2px #3a3a3a;
     width: 100%;
+    left: 0;
     padding: 0 1rem;
-    left:0;
-    display:none;
-    top:100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
 }
-header a{
-    text-decoration: none;
-    color:inherit;
-}
+
+
 /*nav toggle*/
 #nav-toggle:checked~nav{
     display:block;
@@ -78,7 +83,7 @@ main{
     background-color: lightblue;
     /*make main element take any surplus space to push footer down*/
     flex:1 0 auto;
-    margin-top: 60px; 
+    margin-top: 47px; 
     /*the ladies margin-top is 47px */
 
 }
@@ -92,15 +97,15 @@ footer{
     /*to make sure the navbar is always displayed*/
     nav {
         display: block;
-        position:relative;    
-        box-shadow:non;
-        width:fit-content;
+        position: relative;    
+        box-shadow: none;
+        width: fit-content;
         padding-right: 1rem;
     }
     #menu{
         display:flex;
     }
-    #menu > li{
+    #menu > li {
         padding-left: 1rem;
     }
     .nav-toggle-label{
@@ -108,14 +113,16 @@ footer{
     }
     #logo{
         font-size: 280%;
-        line-height: 75px;
+        line-height: 76px;
         margin:0 0.5rem 
     }
     /*main content*/
     main{
-        margin-top:79px;
+        /*push main content down to accomodate larger header*/
+        margin-top:80px;
     }
-    /*large devices (laptops and desktops) */
+
+    /*large devices (laptops and desktops, 992px and up) */
     @media screen and (min-width: 992px) {
         #menu a:hover{
             border-bottom: 1px solid #3a3a3a;
